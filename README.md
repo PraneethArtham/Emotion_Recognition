@@ -1,122 +1,86 @@
-🎤 Speech Emotion Recognition Web App
-A machine learning–powered web application that detects human emotions from speech audio using MFCC features and an SVM classifier, deployed with Streamlit.
+# 🎙️ Speech Emotion Recognition Web App
 
-🌐 Live Application Overview
-This web app allows users to:
+A machine learning–based web application that predicts **human emotions from speech audio** using **MFCC features** and an **SVM (Support Vector Machine)** model.  
+The application is built with **Python**, **Librosa**, **Scikit-learn**, and **Streamlit**.
 
-Upload a .wav audio file
+---
 
-Analyze the speech signal
+## 🚀 Live Demo
+Upload a `.wav` audio file and instantly get the predicted **emotion**.
 
-Predict the emotion expressed in the audio
+---
 
-🎯 Supported Emotions
+## 🧠 Emotions Supported
+- Neutral
+- Calm
+- Happy
+- Sad
+- Angry
+- Fear
+- Disgust
+- Surprise
 
-Neutral
+---
 
-Calm
+## 🛠️ Tech Stack
 
-Happy
+### Machine Learning
+- Python
+- Librosa (audio processing)
+- NumPy & Pandas
+- Scikit-learn (SVM)
+- MFCC feature extraction
 
-Sad
+### Web Framework
+- Streamlit
 
-Angry
+---
 
-Fear
+## 📂 Project Structure
 
-Disgust
+speech-emotion-recognition/
 
-Surprise
+├── app.py # Streamlit frontend
 
-🧠 How It Works (High‑Level)
-Audio Input
+├── function.py # Backend ML logic
 
-User uploads a WAV file through the web interface
+├── audio/ # Dataset audio files
 
-Feature Extraction
+├── uploads/ # User uploaded audio files
 
-Mel Frequency Cepstral Coefficients (MFCCs) are extracted from audio
+├── requirements.txt # Project dependencies
 
-MFCCs capture speech characteristics similar to human hearing
+├── README.md # Project documentation
 
-Model Prediction
+└── speech_emotion_model.pkl (optional)
 
-A Support Vector Machine (SVM) model classifies the emotion
 
-Output is displayed instantly on the UI
+---
 
-🛠️ Tech Stack
-Category	Technology
-Language	Python
-ML Model	Support Vector Machine (SVM)
-Feature Extraction	Librosa (MFCC)
-Web Framework	Streamlit
-Dataset	RAVDESS (Ryerson Audio‑Visual Dataset)
-Libraries	NumPy, Pandas, Scikit‑Learn
-📁 Project Structure
-emotion-recognition/
-│
-├── app.py                 # Streamlit frontend
-├── backend.py             # ML logic (training + inference)
-├── audio/                 # Training dataset (RAVDESS)
-├── uploads/               # Uploaded audio files
-├── requirements.txt
-└── README.md
-🚀 How to Run the Project Locally
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/emotion-recognition.git
-cd emotion-recognition
-2️⃣ Install Dependencies
+## ⚙️ How It Works
+
+1. User uploads a `.wav` audio file
+2. Audio is converted to **MFCC features**
+3. Trained **SVM model** predicts emotion
+4. Emotion result is displayed on the web UI
+
+---
+
+## 🖥️ How to Run the Project
+
+```bash
+git clone https://github.com/your-username/speech-emotion-recognition.git
+cd speech-emotion-recognition
+
+###Install Dependencies
+```bash
 pip install -r requirements.txt
-3️⃣ Run the Web App
+
+### Run the Streamlit app
+```bash
 streamlit run app.py
-The app will open automatically in your browser.
 
-📊 Machine Learning Details
-Algorithm: Support Vector Machine (RBF Kernel)
-
-Features: 40 MFCC coefficients
-
-Scaling: StandardScaler
-
-Train-Test Split: 80% / 20%
-
-Dataset: RAVDESS (Emotion‑labeled speech dataset)
-
-📈 Results
-Achieved high classification accuracy on validation data
-
-SVM performed better than Random Forest for MFCC‑based features
-
-Real‑time predictions through web UI
-
-🎯 Use Cases
-Emotion analysis in voice assistants
-
-Mental health monitoring systems
-
-Call‑center sentiment analysis
-
-Human‑computer interaction (HCI)
-
-AI‑based speech analytics
-
-🔮 Future Enhancements
-🎙️ Live microphone recording
-
-🧠 Gender detection from voice
-
-📊 Confusion matrix & model insights
-
-☁️ Cloud deployment (Streamlit Cloud / AWS)
-
-📱 Mobile‑friendly UI
-
-👨‍💻 Contributors
-Mohammed Ghias Pasha
-
-Artham Praneeth
-
+ 
 
 ### Dataset:https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio
 
