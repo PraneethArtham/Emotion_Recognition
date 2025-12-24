@@ -69,7 +69,7 @@ speech-emotion-recognition/
 ## 🖥️ How to Run the Project
 
 ```bash
-git clone https://github.com/PraneethArtham/speech-emotion-recognition.git
+git clone https://github.com/PraneethArtham/Emotion-Recognition.git
 cd speech-emotion-recognition
 
 ###Install Dependencies
