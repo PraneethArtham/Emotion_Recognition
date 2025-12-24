@@ -10,7 +10,7 @@ st.write("Upload a WAV audio file to predict the emotion")
 
 # Upload audio
 uploaded_file = st.file_uploader(
-    "harvard1.wav",
+    "",
     type=["wav"]
 )
 
@@ -31,3 +31,4 @@ if uploaded_file is not None:
     if st.button("Predict Emotion"):
         emotion = predict_emotion(file_path)
         st.success(f"🎯 Predicted Emotion: **{emotion.upper()}**")
+
